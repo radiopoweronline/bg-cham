@@ -47,7 +47,7 @@ img{
 }
 .container {
 	background: #0e0e0e;
-	background:rgba(14,14,14,0.98);
+	background:rgba(14, 14, 14, 0);
 }
 ul, li {
 	margin: 0;
