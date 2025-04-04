@@ -265,84 +265,98 @@ Vegas Slider Images
 <!--=================================
 	Player
 	=================================-->
-<section id="audio-player">
-  <div class="container">
-    <div class="rock-player">
-      <div class="playListTrigger">
-      	<a href="#"><i class="fa fa-list"></i></a>
-      </div><!--triggerPlayList in responsive-->
-      <div class="row">
-        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-              <div id="player-instance" class="jp-jplayer"></div>
-              <div class="controls">
-                <div class="jp-prev"></div>
-                <div  class="play-pause jp-play"></div>
-                <div  class="play-pause jp-pause" style="display:none"></div>
-                <div class="jp-next"></div>
-              </div>
-              <!--controls--> 
-            </div>
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-              <div class="player-status">
-                <h5 class="audio-title">Champeta Online</h5>
-                <div class="audio-timer"><span class="current-time jp-current-time">00:00</span> </span></div>
-                <div class="audio-progress">
-                  <div class="jp-seek-bar">
-                    <div class="audio-play-bar jp-play-bar" style="width:20%;"></div>
-                  </div>
-                  <!--jp-seek-bar--> 
-                </div>
-                <!--audio-progress--> 
-              </div>
-              <!--player-status--> 
-            </div>
-            <!--column--> 
-          </div>
-          <!--inner-row--> 
-        </div>
-        <!--column-->
-        
-        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-          <div class="audio-list">
-            <div class="audio-list-icon"></div>
-            <div class="jp-playlist"> 
-              <!--Add Songs In mp3 formate here-->
-              <ul class="hidden playlist-files">
-                <li data-title="Champeta Online"
-                                    	
-                                        <li data-title="Champeta Online" 
-    data-mp3="https://stream.zeno.fm/ptqtr8urtfiuv"></li>
-	
-<li data-title="Matadora Mix" 
-    data-mp3="https://stream.zeno.fm/86d5acbxcq1vv"></li>
-	
-<li data-title="Radio Power Salsa" 
-    data-mp3="https://stream.zeno.fm/v99hvs8ojo3tv"></li>
-	
-<li data-title="Radio Power Urbana" 
-    data-mp3="https://stream.zeno.fm/cxf1r8zukyhuv"></li>
-                
-              </ul>
-              <!--Playlist ends-->
-              <h5>Estaciones</h5>
-              <div class="audio-track">
-                <ul>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--row--> 
-    </div>
-  </div>
-</section>
+<meta name="theme-color" content="dark light" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link rel="stylesheet" href="css/main.min.css" />
+<link rel="stylesheet" href="custom.css" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet" />
 
-<div id="ajaxArea">
-    <div class="pageContentArea">
+<div class="msp_radio">
+    <div class="np__global_wrapper">
+        <div id="jp_container_rcast" class="np__global_player">
+            <div class="app-player" id="app-player">
+                <!-- Player -->
+                <div class="player song-now flex column">
+                    <div class="player-wrapper">
+                        <!-- Cover -->
+                        <div class="player-cover flex items-center justify-center g-2 items-center">
+                            <div class="player-left flex items-center">
+                                <!-- Cover -->
+                                <div class="player-artwork player-artwork-style relative">
+                                    <img alt="artwork" height="600" src="assets1/cover.png" width="600" />
+                                </div>
+                                <!-- Data -->
+                                <div class="player-cover-title uppercase fw-700 flex column">
+                                    <div class="player-song-name">
+                                        <!-- <span class="player-program-badge"><i></i></span> -->
+                                        <span class="color-title fw-700 song-name song-title station-name">Song</span>
+                                    </div>
+                                    <span class="color-title fs-8 song-artist station-description truncate">Artist</span>
+                                </div>
+                            </div>
+                            <!-- Controladores -->
+                            <div class="player-controller">
+                                <!-- Cambiar estacion hacia atras -->
+                                
+                                <!-- Reproducir/Pausar -->
+                                <button aria-label="Play/Pause" class="player-button player-button-play flex-none">
+                                    <svg class="i i-play" viewBox="0 0 24 24">
+                                        <path d="m7 3 14 9-14 9z"></path>
+                                    </svg>
+                                </button>
+                                <!-- Cambiar estacion hacia adelante -->
+                                
+                            </div>
+
+                            <div class="player-right flex items-center">
+                                <!-- Volume -->
+                                <div class="player-button player-button-volume">
+                                    <button class="player-button player-button-volume-toggle" data-outside="player-volume">
+                                        <svg class="i i-volume-high" viewBox="0 0 24 24">
+                                            <path d="M6 9H2v6h4l5 4V5Zm9 7a5 5 0 0 0 0-8m3 12a10 10 0 0 0 0-16"></path>
+                                        </svg>
+                                        Volume
+                                    </button>
+                                    <div class="dropdown" id="player-volume">
+                                        <div class="player-range-wrapper">
+                                            <input aria-label="Volume" class="player-volume" max="100" min="0" name="player" type="range" value="100" />
+                                            <div class="player-range-fill"></div>
+                                            <div class="player-range-thumb"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Multiradio -->
+                                
+
+                                <div class="player-station player-artwork-style relative">
+                                    <img alt="artwork" height="600" src="assets1/cover.png" width="600" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visualizador -->
+                    <div class="visualizer" data-bars="120" data-max-height="100"></div>
+                </div>
+
+                <!-- Estaciones -->
+                <aside class="offcanvas-player scrollbar" id="offcanvas-stations">
+                    <div class="offcanvas-content">
+                        <div class="stations flex g-1" id="stations"></div>
+                    </div>
+                </aside>
+
+                <div class="modal-overlay"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+<script src="js/main.js"></script>
 
 <!--=================================
 	Footer
@@ -365,8 +379,6 @@ Script Source
 <script defer  src="assets/js/jquery.flexslider-min.js"></script> 
 <script defer  src="assets/js/jquery.carouFredSel-6.2.1-packed.js"></script> 
 <script defer  src="assets/js/jquery.prettyPhoto.js"></script> 
-<script defer  src="assets/jPlayer/jquery.jplayer.min.js"></script> 
-<script defer  src="assets/jPlayer/add-on/jplayer.playlist.min.js"></script> 
 <script defer  src="assets/js/jquery.vegas.min.js"></script> 
 <script defer  src="assets/js/isotope.js"></script>
 <script defer  src="assets/js/main.js"></script>   
